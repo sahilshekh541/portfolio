@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/css/variables.css';
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+
+body {
+    background-color: var(--bg-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    font-family: var(--font-family) !important;
+    color: var(--text-dark) !important;
+}
+
+/* common classes */
+.mt-80px {
+    margin-top: 80px !important;
+}
+
+.my-60px {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.section-title-text-secondary {
+    color: var(--text-muted);
+}
