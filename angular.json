@@ -23,7 +23,8 @@
               "src/assets",
               "src/robots.txt",
               "src/sitemap.xml",
-              "src/llms.txt"
+              "src/llms.txt",
+              "src/google1234567890abcdef.html"
             ],
             "styles": [
               "src/styles.css",
