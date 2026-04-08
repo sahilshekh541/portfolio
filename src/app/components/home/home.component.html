@@ -1,446 +1,238 @@
-<main class="main-content">
-  <!-- Hero Section -->
-  <section class="mt-80px hero-section container" id="home">
-    <span
-      class="badge rounded-pill mb-4 d-inline-flex align-items-center gap-2 text-uppercase"
-    >
-      <span class="status-dot"></span>
-      Open To Work
-    </span>
-    <h1 class="name d-flex flex-column">
-      SAHIL<span class="surname">SHEKH</span>
-    </h1>
-    <h2 class="designation">Frontend Developer | Angular Developer</h2>
-    <p class="description">
-      Constructing high-performing, scalable web apps with an emphasis on
-      functional minimalism and clean architecture.
-    </p>
-    <div class="d-flex gap-2 mt-4 action-buttons">
-      <a
-        href="#contact"
-        aria-label="Redirect to contact section"
-        class="btn hire-btn rounded-pill"
-        >Hire Me
-        <img
-          class="light-icon"
-          src="assets/images/right-arrow.svg"
-          height="14"
-          width="14"
-          alt="download icon"
-          loading="lazy"
-        />
-      </a>
-      <a
-        href="assets/resume/cv-1+yr-frontend-developer.pdf"
-        download="sahil_frontenddeveloper_1.5+yrs"
-        aria-label="Download resume"
-        class="btn download-btn rounded-pill"
-        >Resume
-        <img
-          class="light-icon"
-          src="assets/images/download-icon-white.svg"
-          height="14"
-          width="14"
-          loading="lazy"
-          alt="download icon"
-        />
-        <img
-          class="dark-icon"
-          src="assets/images/download-icon-dark.svg"
-          height="14"
-          width="14"
-          alt="download icon"
-          loading="lazy"
-        />
-      </a>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center px-12 pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <img class="w-full h-full object-cover grayscale mix-blend-overlay"
+            data-alt="abstract digital matrix with circuit patterns and glowing lines in a deep chocolate atmospheric setting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3k1VhDVMWDpxx03Lstmd0u1HlEa6NxDXxH02XtoWuPOk3yMRHl11viuDBL-Bdg9R2nkw1TI3LpoVUFfLg9AJCjHjSqFqMFx3GIu4lhPotmaQZy-Euy8P4uK4Z9WyYHzuontrHGIccbmb0qLOG9pfFYz1JKo2Dam4y_dP0MgvLyeB2OTlypVzzW9ZDl65cqE893NFPx-aOzRX9dx5-N6xxJq8RDP7_gLHmqZEPSAegALekkB9Vhj33AGPDddExjtYEzQtK-md6MEpk" />
     </div>
-  </section>
-  <!-- hero section: end -->
-  <!-- about section: start -->
-  <section class="my-60px about-section container" id="about">
-    <!-- section title -->
-    <h2 class="title text-left section-title">
-      About <span class="section-title-text-secondary">Me</span>
-    </h2>
-    <p class="desgination d-flex align-items-center">THE ANGULAR DEVELOPER</p>
-    <h3>
-      Building scalable Angular applications with a focus on functional
-      minimalism and performance-driven architecture.
-    </h3>
-    <p class="description mb-5">
-      I craft high-performance web experiences using Angular, bridging clean UI
-      design with robust frontend engineering. With 1.5+ years of experience, I
-      specialize in creating scalable, maintainable applications that are
-      technically solid and visually seamless.
-    </p>
-    <!-- location and status -->
-    <div class="d-flex align-items-center gap-5 location-status-wrapper">
-      <div class="location title-desc-wrapper">
-        <h4 class="title">Location</h4>
-        <p class="description">Rajkot, Gujarat (Open to relocate)</p>
-      </div>
-      <div class="status title-desc-wrapper">
-        <h4 class="title">Status</h4>
-        <p class="description">Open to Work</p>
-      </div>
+    <div class="relative z-10 max-w-5xl">
+        <span class="inline-block text-primary font-bold uppercase tracking-[0.2em] text-sm mb-6 font-label">
+            SOFTWARE ENGINEER
+        </span>
+
+        <h1
+            class="text-5xl sm:text-6xl md:text-8xl font-extrabold font-headline leading-[1] md:leading-[0.9] tracking-tighter text-on-surface mb-8 break-words">
+            Engineering <span class="text-primary italic">Scalable</span> Digital Experiences.
+        </h1>
+
+        <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 font-body leading-relaxed">
+            I am a software developer who builds scalable web and mobile applications with a strong focus on clean code,
+            performance, and user experience.
+        </p>
+        <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 w-full">
+            <a routerLink="/projects"
+                class="w-full lg:w-auto brushed-gold text-on-primary font-bold py-4 px-10 rounded-lg hover:scale-[1.05] transition-transform text-lg font-headline uppercase tracking-tight text-center">
+                Start a Project
+            </a>
+            <a routerLink="/projects"
+                class="w-full lg:w-auto border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors py-4 px-10 rounded-lg text-lg font-headline uppercase tracking-tight text-center">
+                View my work
+            </a>
+        </div>
     </div>
-    <!-- badges and get in touch button -->
-    <div
-      class="skills-set mt-5 d-flex flex-column flex-lg-row gap-4 align-items-center justify-content-between"
-    >
-      <div class="badges-wrapper d-flex align-items-center gap-2 flex-wrap">
-        <div class="badge skil-badge rounded-pill text-uppercase">HTML</div>
-        <div class="badge skil-badge rounded-pill text-uppercase">CSS</div>
-        <div class="badge skil-badge rounded-pill text-uppercase">
-          Bootstrap
-        </div>
-        <div class="badge skil-badge rounded-pill text-uppercase">
-          Tailwind CSS
-        </div>
-        <div class="badge skil-badge rounded-pill text-uppercase">Angular</div>
-        <a
-          href="#skills"
-          aria-label="Redirect to skills section"
-          class="badge skil-badge text-decoration-none rounded-pill view-all-badge text-uppercase"
-          >View All</a
-        >
-      </div>
-      <!-- get in touch button -->
-      <a
-        href="#contact"
-        aria-label="Redirect to contact section"
-        class="btn get-in-touch-btn rounded-pill"
-        >Get In Touch<img
-          class="light-icon"
-          src="assets/images/right-arrow.svg"
-          height="14"
-          width="14"
-          alt="download icon"
-          loading="lazy"
-      /></a>
+</section>
+<!-- services section -->
+<section class="py-32 px-12 bg-surface">
+    <div class="mb-10">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-headline tracking-tighter mb-4 text-on-surface">
+            Technical
+            Expertise</h2>
+        <div class="w-24 h-1 bg-primary"></div>
     </div>
-  </section>
-  <!-- about section: end -->
-  <!-- tech stack section: start -->
-  <section class="my-60px tech-stack-section container" id="skills">
-    <!-- section title -->
-    <h2 class="title text-left section-title">
-      Tech <span class="section-title-text-secondary">Stack</span>
-    </h2>
-    <div class="badges-wrapper d-flex align-items-center gap-2 flex-wrap mt-3">
-      <div class="badge skil-badge rounded-pill text-uppercase">HTML</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">CSS</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">JavaScript</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">TypeScript</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Dart</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Bootstrap</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">
-        Tailwind CSS
-      </div>
-      <div class="badge skil-badge rounded-pill text-uppercase">GSAP</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Angular</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">React</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Flutter</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Wix</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Node.js</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Git</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">GitHub</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">MySql</div>
-      <div class="badge skil-badge rounded-pill text-uppercase">Firebase</div>
-    </div>
-  </section>
-  <!-- tech stack section: end -->
-  <!-- feature projects section: start -->
-  <section class="feature-projects-section container my-60px" id="projects">
-    <!-- section title -->
-    <h2 class="title text-left section-title">
-      Feature <span class="section-title-text-secondary">Projects</span>
-    </h2>
-    <!-- projects -->
-    <div class="projects-list row g-4 mt-3">
-      <!-- ownai-project -->
-      <div class="col-md-6 project-card-wrapper">
-        <div class="card project-card h-100">
-          <img
-            src="assets/images/ownai-project.webp"
-            class="card-img-top"
-            alt="ownAI portfolio website"
-            loading="lazy"
-            height="865"
-            width="1920"
-          />
-          <div class="card-body">
-            <h3 class="card-subtitle h6 mb-2 text-body-secondary">Angular</h3>
-            <h4 class="card-title h5">ownAI</h4>
-            <p class="card-text">
-              Built the ownAI portfolio website featuring animated, visually
-              striking landing pages with seamless functionality, improved
-              performance, and enhanced SEO optimization.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- maximumlife project -->
-      <div class="col-md-6 project-card-wrapper">
-        <div class="card project-card h-100">
-          <img
-            src="assets/images/maximumlife-project.webp"
-            class="card-img-top"
-            alt="maximumlife portfolio website"
-            loading="lazy"
-            height="871"
-            width="1887"
-          />
-          <div class="card-body">
-            <h3 class="card-subtitle h6 mb-2 text-body-secondary">Angular</h3>
-            <h4 class="card-title h5">Maximumlife</h4>
-            <p class="card-text">
-              MaximumLife is a task and vision management platform designed for
-              tutors and trainees to track daily progress, assign tasks, and
-              manage goals. It enables students to update daily activities,
-              maintain a vision board, and stay aligned with their long-term
-              objectives.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- OMS project -->
-      <div class="col-md-6 project-card-wrapper">
-        <div class="card project-card h-100">
-          <img
-            src="assets/images/oms-saas-app.webp"
-            class="card-img-top"
-            alt="oms portfolio website"
-            loading="lazy"
-            height="877"
-            width="1024"
-          />
-          <div class="card-body">
-            <h3 class="card-subtitle h6 mb-2 text-body-secondary">Angular</h3>
-            <h4 class="card-title h5">OMS</h4>
-            <p class="card-text">
-              OMS (Organization Management System) is a role-based application
-              designed to streamline organizational workflows. I implemented a
-              brand-consistent theming system along with a secure role and
-              permission-based module architecture to ensure controlled access
-              and scalable functionality.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Misk perfume ecommerce project -->
-      <div class="col-md-6 project-card-wrapper">
-        <div class="card project-card h-100">
-          <img
-            src="assets/images/misk-perfume-project.webp"
-            class="card-img-top"
-            alt="misk perfume portfolio website"
-            loading="lazy"
-            height="734"
-            width="1074"
-          />
-          <div class="card-body">
-            <h3 class="card-subtitle h6 mb-2 text-body-secondary">Angular</h3>
-            <h4 class="card-title h5">Misk</h4>
-            <p class="card-text">
-              Misk is an eCommerce platform for an attar and perfume brand,
-              designed to deliver a seamless and elegant online shopping
-              experience. The store features product catalog management, a
-              smooth checkout flow, and a performance-optimized, responsive UI
-              aligned with the brand’s premium identity.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio project -->
-      <div class="col-md-6 project-card-wrapper">
-        <div class="card project-card h-100">
-          <img
-            src="assets/images/portfolio-project.webp"
-            class="card-img-top"
-            alt="portfolio website"
-            loading="lazy"
-            height="876"
-            width="1920"
-          />
-          <div class="card-body">
-            <h3 class="card-subtitle h6 mb-2 text-body-secondary">React</h3>
-            <h4 class="card-title h5">Portfolio</h4>
-            <p class="card-text">
-              A personal portfolio website designed to showcase developer
-              skills, technical expertise, and completed projects. It highlights
-              real-world implementations, performance-focused solutions, and
-              clean, modern UI development.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- feature projects section: end -->
-  <!-- work & experience section: start -->
-  <section class="work-expereince-section container my-60px" id="experience">
-    <!-- section title -->
-    <h2 class="title text-left section-title mb-4">
-      Work & <span class="section-title-text-secondary">Experience</span>
-    </h2>
-    <!-- work expereince card -->
-    <div class="row g-4 cards-list">
-      <!-- training -->
-      <div class="col-12 card-wrapper">
+    <!-- The Service Blades -->
+    <div class="grid grid-cols-1 gap-8">
+        <!-- Blade 1: Web Engineering -->
         <div
-          class="card p-4 work-expereince-card gap-3 d-flex flex-column flex-lg-row"
-        >
-          <div class="card-content-left d-flex gap-4 flex-row flex-md-column">
-            <div class="duration-wrapper content-wrapper">
-              <h3 class="duration-title title">Duration</h3>
-              <p class="duration-value value">Aug 2024 — Jan 2025</p>
+            class="group relative bg-surface-container-high rounded-xl p-8 md:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between overflow-hidden border border-transparent hover:border-outline-variant transition-all duration-500">
+            <div class="flex-1 z-10 w-full">
+                <span
+                    class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block font-label">Infrastructure</span>
+                <h3 class="text-3xl md:text-4xl font-bold font-headline mb-4 text-on-surface">Web Engineering</h3>
+                <p class="text-on-surface-variant max-w-md font-body text-base md:text-lg leading-relaxed">
+                    Scalable, robust web applications built with modern stacks. I turn complex requirements
+                    into seamless user experiences.
+                </p>
             </div>
-            <div class="location-wrapper content-wrapper">
-              <h3 class="location-title title">Location</h3>
-              <p class="location-value value">Rajkot, Gujarat</p>
+            <div class="mt-8 sm:mt-0 sm:ml-6 z-10 shrink-0">
+                <svg class="w-20 h-20 md:w-24 md:h-24 text-primary/20 group-hover:text-primary transition-colors duration-500"
+                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
             </div>
-          </div>
-          <div class="card-content-right ms-0 ms-md-5">
-            <h3 class="company-name">ownAI</h3>
-            <h4 class="role">Trainee Software Engineer</h4>
-            <ul class="learn-points">
-              <li class="point-item">
-                Learned and implemented industry best coding practices and clean
-                code standards
-              </li>
-              <li class="point-item">
-                Developed scalable applications using Angular framework
-              </li>
-              <li class="point-item">
-                Gained understanding of component-based architecture and
-                reusable modules
-              </li>
-              <li class="point-item">
-                Followed version control practices using Git
-              </li>
-              <li class="point-item">
-                Worked with RESTful APIs for data integration and backend
-                communication
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <!-- Expereince -->
-      <div class="col-12 card-wrapper">
+
+        <!-- Blade 2: Mobile Engineering -->
         <div
-          class="card p-4 work-expereince-card gap-3 d-flex flex-column flex-lg-row"
-        >
-          <div class="card-content-left d-flex gap-4 flex-row flex-md-column">
-            <div class="duration-wrapper content-wrapper">
-              <h3 class="duration-title title">Duration</h3>
-              <p class="duration-value value">Feb 2025 — Feb 2026</p>
+            class="group relative bg-surface-container-high rounded-xl p-8 md:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between overflow-hidden border border-transparent hover:border-outline-variant transition-all duration-500">
+            <div class="flex-1 z-10 w-full">
+                <span
+                    class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block font-label">Ecosystem</span>
+                <h3 class="text-3xl md:text-4xl font-bold font-headline mb-4 text-on-surface">Mobile Engineering</h3>
+                <p class="text-on-surface-variant max-w-md font-body text-base md:text-lg leading-relaxed">
+                    Native and cross-platform mobile experiences that deliver performance and intuitive design directly
+                    to users' hands.
+                </p>
             </div>
-            <div class="location-wrapper content-wrapper">
-              <h3 class="location-title title">Location</h3>
-              <p class="location-value value">Rajkot, Gujarat</p>
+            <div class="mt-8 sm:mt-0 sm:ml-6 z-10 shrink-0">
+                <svg class="w-20 h-20 md:w-24 md:h-24 text-primary/20 group-hover:text-primary transition-colors duration-500"
+                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
             </div>
-          </div>
-          <div class="card-content-right ms-0 ms-md-5">
-            <h3 class="company-name">ownAI</h3>
-            <h4 class="role">Junior Software Engineer</h4>
-            <ul class="learn-points">
-              <li class="point-item">
-                Followed industry best coding practices and maintained clean,
-                scalable architecture
-              </li>
-              <li class="point-item">
-                Collaborated closely with the backend team for seamless RESTful
-                API integrations
-              </li>
-              <li class="point-item">
-                Worked alongside the UX/UI team to translate designs into
-                responsive, user-friendly interfaces
-              </li>
-              <li class="point-item">
-                Coordinated with BDE to understand client requirements and
-                deliver tailored solutions
-              </li>
-              <li class="point-item">
-                Implemented secure and efficient RESTful API integrations
-              </li>
-              <li class="point-item">
-                Wrote and maintained unit tests to ensure application stability
-                and reliability
-              </li>
-              <li class="point-item">
-                Optimized application performance and improved SEO for better
-                visibility and user experience
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
+        <!-- Blade 2: Ads Management -->
+        <!-- <div
+            class="group relative bg-surface-bright/40 rounded-xl p-10 flex flex-col md:flex-row items-center justify-between overflow-hidden border border-transparent hover:border-outline-variant transition-all duration-500">
+            <div class="flex-1 z-10">
+                <span
+                    class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block font-label">Growth</span>
+                <h3 class="text-4xl font-bold font-headline mb-4 text-on-surface">Strategic Digital Marketing</h3>
+                <p class="text-on-surface-variant max-w-md font-body text-lg leading-relaxed">
+                    Performance-driven campaigns that turn attention into conversion. I optimize your ROAS through
+                    rigorous data testing and creative alchemy.
+                </p>
+            </div>
+            <div class="mt-8 md:mt-0 z-10">
+                <span
+                    class="material-symbols-outlined text-8xl text-primary/20 group-hover:text-primary transition-colors duration-500"
+                    style="font-variation-settings: 'FILL' 1;">insights</span>
+            </div>
+        </div> -->
+        <!-- Blade 3: Editorial Content (De-emphasized/Re-framed) -->
+        <!-- <div
+            class="group relative bg-surface-bright/40 rounded-xl p-10 flex flex-col md:flex-row items-center justify-between overflow-hidden border border-transparent hover:border-outline-variant transition-all duration-500">
+            <div class="flex-1 z-10">
+                <span
+                    class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block font-label">Content</span>
+                <h3 class="text-4xl font-bold font-headline mb-4 text-on-surface">Editorial Content Design</h3>
+                <p class="text-on-surface-variant max-w-md font-body text-lg leading-relaxed">
+                    High-end visual storytelling and short-form video editing that reinforces your digital brand
+                    authority.
+                </p>
+            </div>
+            <div class="mt-8 md:mt-0 z-10">
+                <span
+                    class="material-symbols-outlined text-8xl text-primary/20 group-hover:text-primary transition-colors duration-500"
+                    style="font-variation-settings: 'FILL' 1;">movie_edit</span>
+            </div>
+        </div> -->
     </div>
-  </section>
-  <!-- work & experience section: end -->
-  <!-- Get in touch section : start-->
-  <section class="get-in-touch-section container my-60px" id="contact">
-    <!-- section title -->
-    <span
-      class="badge rounded-pill mb-2 d-inline-flex align-items-center gap-2 text-uppercase"
-    >
-      <span class="status-dot"></span>
-      AVAILABLE FOR WORK
-    </span>
-    <h2 class="title text-left section-title mb-4">
-      Get in <span class="section-title-text-secondary">Touch</span>
-    </h2>
-    <div class="menus-link d-flex flex-column gap-5">
-      <a
-        href="mailto:sahilshekh1117@gmail.com"
-        target="_blank"
-        aria-label="Redirect to sahil shekh email address"
-        class="menu-link d-flex align-items-center"
-        ><span class="me-4">01.</span>
-        <div class="d-flex flex-column text-wrapper">
-          <span class="email-text">EMAIL</span>
-          <span class="value-text">Send Via Email</span>
+</section>
+<!-- Skills & Technologies Section -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-10">
+            <h2
+                class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-headline tracking-tighter mb-4 text-on-surface">
+                Skills
+                &amp;
+                Technologies</h2>
+            <div class="w-24 h-1 bg-primary"></div>
         </div>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/sahil-shekh541"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Redirect to the linkedin profile"
-        class="menu-link d-flex align-items-center"
-        ><span class="me-4">02.</span>
-        <div class="d-flex flex-column text-wrapper">
-          <span class="email-text">LINKEDIN</span>
-          <span class="value-text">View Profile</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Development Category -->
+            <div>
+                <h3
+                    class="text-xl font-bold font-headline text-primary uppercase tracking-widest mb-8 flex items-center gap-3">
+                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
+                        </path>
+                    </svg> Development
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">HTML</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">CSS</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">SCSS</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Bootstrap</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Tailwind</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Javascript</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">TypeScript</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Angular</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">React</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Flutter</span>
+                </div>
+            </div>
+            <!-- Marketing Category -->
+            <!-- <div>
+                <h3
+                    class="text-xl font-bold font-headline text-primary uppercase tracking-widest mb-8 flex items-center gap-3">
+                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg> Marketing
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Meta
+                        Ads</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Google
+                        Ads</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">SEO</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Growth
+                        Hacking</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Analytics</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Copywriting</span>
+                </div>
+            </div> -->
+            <!-- Tools Category -->
+            <div>
+                <h3
+                    class="text-xl font-bold font-headline text-primary uppercase tracking-widest mb-8 flex items-center gap-3">
+                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                        </path>
+                    </svg> Tools
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Vs
+                        Code</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Antigravity</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Git</span>
+                    <span
+                        class="px-5 py-3 bg-surface-container-high text-on-surface rounded-full text-sm font-medium border border-outline-variant/30 hover:border-primary transition-colors cursor-default">Postman</span>
+                </div>
+            </div>
         </div>
-      </a>
-      <a
-        href="https://github.com/sahilshekh541"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Redirect to the github profile"
-        class="menu-link d-flex align-items-center"
-        ><span class="me-4">03.</span>
-        <div class="d-flex flex-column text-wrapper">
-          <span class="email-text">GITHUB</span>
-          <span class="value-text">View Work</span>
-        </div>
-      </a>
-      <a
-        href="https://wa.me/+919106253488"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Redirect to the whatsapp chat"
-        class="menu-link d-flex align-items-center"
-        ><span class="me-4">04.</span>
-        <div class="d-flex flex-column text-wrapper">
-          <span class="email-text">WHATSAPP</span>
-          <span class="value-text">Message Me</span>
-        </div>
-      </a>
     </div>
-  </section>
-  <!-- Get in touch section: end -->
-</main>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-12 relative overflow-hidden text-center bg-surface">
+    <div class="absolute inset-0 bg-primary/5 blur-[120px] rounded-full scale-150"></div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-headline tracking-tighter mb-8 text-on-surface">
+            Ready to
+            evolve your digital presence?</h2>
+        <p class="text-xl text-on-surface-variant mb-12 font-body">Stop settling for template solutions. Let's build
+            something that truly reflects your authority.</p>
+        <button
+            class="brushed-gold text-on-primary font-bold py-6 px-16 rounded-xl hover:scale-105 active:scale-95 transition-all text-xl font-headline uppercase tracking-tighter">
+            Schedule a Consultation
+        </button>
+    </div>
+</section>

@@ -1,0 +1,123 @@
+<div *ngIf="project" class="project-detail-container min-h-screen bg-surface text-on-surface font-body">
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] md:h-[75vh] w-full overflow-hidden">
+    <div class="absolute inset-0 image-reveal">
+      <img [src]="project.image" [alt]="project.title"
+        class="w-full h-full object-cover brightness-[0.4] grayscale-[0.3]">
+      <div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+    </div>
+
+    <div class="absolute bottom-16 left-6 sm:left-12 lg:left-24 max-w-5xl">
+      <button (click)="goBack()"
+        class="flex items-center gap-2 text-primary font-bold mb-10 hover:translate-x-[-4px] transition-transform group font-headline uppercase tracking-tighter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to projects
+      </button>
+
+      <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block reveal-text font-label">
+        {{ project.category }}
+      </span>
+      <h1
+        class="text-5xl md:text-9xl font-extrabold uppercase tracking-tighter mb-6 reveal-text font-headline leading-none">
+        {{ project.title }}
+      </h1>
+    </div>
+  </section>
+
+  <!-- Project Overview Section -->
+  <section class="px-6 sm:px-12 lg:px-24 py-20 border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-8">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-8 font-label">Overview</h2>
+        <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed font-body mb-16 reveal-text">
+          {{ project.details }}
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div class="reveal-text">
+            <h3 class="text-xl font-bold mb-4 font-headline text-on-surface">The Problem</h3>
+            <p class="text-on-surface-variant leading-relaxed text-lg">{{ project.problem }}</p>
+          </div>
+          <div class="reveal-text">
+            <h3 class="text-xl font-bold mb-4 font-headline text-on-surface">The Solution</h3>
+            <p class="text-on-surface-variant leading-relaxed text-lg">{{ project.solution }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 lg:pl-12">
+        <div class="space-y-12 h-fit lg:sticky lg:top-32">
+          <div class="reveal-text">
+            <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6 font-label">Role</h3>
+            <p class="text-on-surface font-bold text-2xl font-headline">{{ project.role }}</p>
+          </div>
+
+          <div class="reveal-text">
+            <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6 font-label">Technologies</h3>
+            <div class="flex flex-wrap gap-3">
+              <span *ngFor="let tech of project.technologies"
+                class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 text-on-surface-variant rounded-lg text-sm font-medium">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact & Improvements Section -->
+  <section class="px-6 sm:px-12 lg:px-24 py-32 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-16 font-label text-center">Impact &
+        Improvements</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- SEO Score -->
+        <div class="reveal-text bg-surface-container p-12 rounded-3xl border border-outline-variant/10 text-center">
+          <h3 class="text-on-surface-variant font-bold mb-8 uppercase tracking-widest text-sm">SEO Optimization</h3>
+          <div class="flex items-center justify-center gap-12">
+            <div>
+              <div class="text-on-surface-variant text-sm mb-2 opacity-60">Before</div>
+              <div class="text-4xl font-extrabold text-on-surface opacity-40">{{ project.improvements.seo.before }}
+              </div>
+            </div>
+            <div class="text-primary text-3xl font-light">→</div>
+            <div>
+              <div class="text-primary text-sm mb-2 font-bold">After</div>
+              <div class="text-6xl font-extrabold text-primary">{{ project.improvements.seo.after }}+</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Score -->
+        <div class="reveal-text bg-surface-container p-12 rounded-3xl border border-outline-variant/10 text-center">
+          <h3 class="text-on-surface-variant font-bold mb-8 uppercase tracking-widest text-sm">Performance</h3>
+          <div class="flex items-center justify-center gap-12">
+            <div>
+              <div class="text-on-surface-variant text-sm mb-2 opacity-60">Before</div>
+              <div class="text-4xl font-extrabold text-on-surface opacity-40">{{ project.improvements.performance.before
+                }}</div>
+            </div>
+            <div class="text-primary text-3xl font-light">→</div>
+            <div>
+              <div class="text-primary text-sm mb-2 font-bold">After</div>
+              <div class="text-6xl font-extrabold text-primary">{{ project.improvements.performance.after }}+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 text-center">
+        <a href="#"
+          class="inline-block py-6 px-16 brushed-gold text-on-primary font-bold rounded-xl hover:scale-105 transition-all text-xl font-headline uppercase tracking-tighter">
+          Visit Live Site
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

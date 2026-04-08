@@ -1,62 +1,28 @@
-.header {
-    box-shadow: 1px 2px 2px #00000017;
-    background: var(--bg-light);
-    z-index: 999;
-}
-
-.header .navbar .navbar-wrapper .navbar-brand .logo .name {
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.header .navbar .navbar-wrapper .navbar-brand .logo .name .surname {
-    color: var(--text-muted);
-}
-
-.header .navbar .navbar-wrapper .navbar-brand .logo .designation {
-    font-size: 12px;
-    color: var(--text-muted) !important;
-    letter-spacing: 1px;
-}
-
-.header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link {
-    color: var(--zinc-500);
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 1px;
+.nav-link {
     position: relative;
-    padding: 5px 0;
+    padding-bottom: 0.25rem;
     transition: color 0.3s ease;
 }
 
-.header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover {
-    color: var(--text-dark);
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
 
-@media screen and (min-width:991.98px) {
-    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav {
-        gap: 20px;
-    }
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
-    /* menu hover effect */
-
-    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: -2px;
-        left: 0;
-        background-color: var(--primary);
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
-    }
-
-    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
