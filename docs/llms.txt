@@ -38,6 +38,7 @@ Skills: https://sahilshekh541.github.io/portfolio#skills
 Experience: https://sahilshekh541.github.io/portfolio#experience
 Contact: https://sahilshekh541.github.io/portfolio#contact
 Blogs: https://sahilshekh541.github.io/portfolio/blogs
+Blog - Angular Performance Optimization: https://sahilshekh541.github.io/portfolio/blogs/angular-performance-optimization
 
 ## Contact
 For freelance or job opportunities, use the contact section on the website.
