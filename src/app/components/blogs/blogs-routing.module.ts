@@ -24,9 +24,13 @@ const routes: Routes = [
       uploadDate: '2026-04-14'
     }
   },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BlogsRouterModule {}
+export class BlogsRouterModule { }
