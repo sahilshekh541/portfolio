@@ -37,6 +37,7 @@ About: https://sahilshekh541.github.io/portfolio#about
 Skills: https://sahilshekh541.github.io/portfolio#skills
 Experience: https://sahilshekh541.github.io/portfolio#experience
 Contact: https://sahilshekh541.github.io/portfolio#contact
+Blogs: https://sahilshekh541.github.io/portfolio/blogs
 
 ## Contact
 For freelance or job opportunities, use the contact section on the website.
