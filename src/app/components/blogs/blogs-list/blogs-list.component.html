@@ -1,0 +1,67 @@
+<!-- blogs list main content: start -->
+<main class="blogs-list-main-content">
+  <!-- blogs list top head section:start -->
+  <section class="mt-80px top-header-section container-fluid p-5">
+    <!-- inside content: start -->
+    <div class="container inside-content">
+      <div class="title-description-searchbar">
+        <h1 class="section-title text-center mb-4">Our Blogs</h1>
+        <p class="description text-center mb-5">
+          Explore the latest insights on Angular, performance, and modern web development.
+        </p>
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" [(ngModel)]="searchText" (ngModelChange)="searchSubject.next($event)"
+              class="search-input" placeholder="Search articles..." />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- inside content: end -->
+  </section>
+  <!-- blogs list top head section:end -->
+
+  <!-- blogs list section: start -->
+  <section class="blogs-list container pb-5">
+    <div class="row blogs-list-row g-4" *ngIf="blogs.length > 0; else noResults">
+      <!-- blog iteration -->
+      <article class="col-md-6 col-lg-4 blog-card-container" *ngFor="let blog of blogs">
+        <div class="blog-card card border-0 h-100">
+          <div class="image-wrapper">
+            <img [src]="blog.thumbnail" class="card-img-top" [alt]="blog.title" loading="lazy" />
+          </div>
+          <div class="card-body py-2 px-0">
+            <div class="blog-date mb-2 text-muted small">{{ blog.date }}</div>
+            <h2 class="blog-title h5 mb-3">{{ blog.title }}</h2>
+            <p class="description mb-4">
+              {{ blog.description }}
+            </p>
+            <a [routerLink]="blog.slug" class="read-link-btn">
+              Read Article
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- No results template -->
+    <ng-template #noResults>
+      <div class="no-results text-center py-5">
+        <h3>No blogs found</h3>
+        <p class="text-muted">Try searching with different keywords.</p>
+      </div>
+    </ng-template>
+  </section>
+  <!-- blogs list section: end -->
+</main>
+<!-- blogs list main content: end -->

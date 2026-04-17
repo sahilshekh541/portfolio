@@ -1,6 +1,9 @@
 import { AfterViewInit, Component } from '@angular/core';
-
-declare function hideInitialLoader(): void;
+declare global {
+  interface Window {
+    hideAppLoader: () => void;
+  }
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,8 +11,9 @@ declare function hideInitialLoader(): void;
 })
 export class AppComponent implements AfterViewInit {
   constructor() { }
-
-  ngAfterViewInit(): void {
-    hideInitialLoader();
+  ngAfterViewInit() {
+    setTimeout(() => {
+      window.hideAppLoader();
+    });
   }
 }

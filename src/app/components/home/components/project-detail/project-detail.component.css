@@ -1,0 +1,39 @@
+.section-title {
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: fit-content;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.section-title:before {
+    background-color: #eef1f3;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+
+.section-title:after {
+    background-color: #eef1f3;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+}
+
+.project-detail-main-content .project-details .problem-faced-section .problems-list .problem-item,
+.project-detail-main-content .project-details .solution-section .solutions-list .solution-item {
+    margin-bottom: 10px;
+}
+
+.project-detail-main-content .project-details .problem-faced-section .problems-list .problem-item:last-child,
+.project-detail-main-content .project-details .solution-section .solutions-list .solution-item:last-child {
+    margin-bottom: 0px;
+}

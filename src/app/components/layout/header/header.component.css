@@ -30,7 +30,8 @@
     transition: color 0.3s ease;
 }
 
-.header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover {
+.header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover,
+.header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.active {
     color: var(--text-dark);
 }
 
@@ -54,7 +55,8 @@
         transition: transform 0.3s ease-out;
     }
 
-    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover::after {
+    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link:hover::after,
+    .header .navbar .navbar-wrapper .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.active::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }

@@ -1,10 +1,10 @@
 <header class="header position-fixed top-0 w-100">
   <nav class="navbar navbar-expand-lg">
     <div class="container navbar-wrapper">
-      <a class="navbar-brand" href="#home">
+      <a class="navbar-brand" routerLink="/">
         <div class="d-flex flex-column logo">
           <p class="name mb-0">Sahil <span class="surname">Shekh</span></p>
-          <p class="designation mb-0">- Frontend Developer</p>
+          <p class="designation mb-0">- Software Engineer</p>
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -14,19 +14,22 @@
       <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" routerLink="/" fragment="about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" routerLink="/" fragment="skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" routerLink="/" fragment="projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" routerLink="/" fragment="experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" routerLink="/" fragment="contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="blogs" routerLinkActive="active">Blogs</a>
           </li>
         </ul>
       </div>

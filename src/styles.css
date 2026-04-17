@@ -2,7 +2,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 
@@ -35,10 +34,34 @@ li {
 }
 
 .section-title {
-    font-size: 42px;
-    font-weight: 800;
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+@media screen and (max-width: 991px) {
+    .section-title {
+        font-size: 38px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-title {
+        font-size: 32px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 28px !important;
+    }
 }
 
 .section-title-text-secondary {
-    color: var(--text-muted);
+    color: var(--primary);
+}
+
+/* breadcrumb */
+.breadcrumb-item>a {
+    color: var(--link-text-color) !important;
 }

@@ -1,0 +1,62 @@
+<main class="project-detail-main-content">
+  <!-- project details start -->
+  <section class="project-details container mt-80px">
+    <!-- bread crumb -->
+    <nav aria-label="breadcrumb my-5">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a routerLink="/" aria-label="Redirect to the Home page">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ activatedURL }}
+        </li>
+      </ol>
+    </nav>
+    <div class="top-details-section">
+      <h1>{{ projectDetail?.title }}</h1>
+      <h2 class="h4 fw-light">{{ projectDetail?.description }}</h2>
+    </div>
+    <div class="overview-section my-60px">
+      <h2 class="h4 section-title">Overview</h2>
+      <p
+        class="mb-2"
+        *ngFor="let description of projectDetail?.overview"
+        [innerHTML]="description"
+      ></p>
+    </div>
+    <!-- problem faced section -->
+    <div class="problem-faced-section">
+      <h2 class="h4 section-title">Challenges Faced</h2>
+      <ul class="problems-list">
+        <li
+          class="problem-item"
+          *ngFor="let problem of projectDetail?.problems"
+          [innerHTML]="problem"
+        ></li>
+      </ul>
+    </div>
+    <!-- solutions -->
+    <div class="solution-section my-60px">
+      <h2 class="h4 section-title">Solutions Implemented</h2>
+      <ul class="solutions-list">
+        <li
+          class="solution-item"
+          *ngFor="let solution of projectDetail?.solutions"
+          [innerHTML]="solution"
+        ></li>
+      </ul>
+    </div>
+    <!-- impact -->
+    <div class="impact-section my-60px">
+      <h2 class="h4 section-title">Results & Impact</h2>
+      <div class="impact-wrapper row">
+        <div class="col-md-4 mb-4" *ngFor="let impact of projectDetail?.impact">
+          <h3
+            class="h5 card p-3 h-100 shadow impact-card"
+            [innerHTML]="impact"
+          ></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

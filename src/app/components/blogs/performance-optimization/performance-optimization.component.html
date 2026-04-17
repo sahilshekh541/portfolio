@@ -1,0 +1,299 @@
+<article class="blog-detail-container mt-80px">
+  <!-- Blog Header / Hero -->
+  <header class="blog-hero pb-5 mb-5">
+    <div class="container text-center">
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/blogs">Blogs</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Angular Performance</li>
+        </ol>
+      </nav>
+      <h1 class="blog-title mb-4">Performance Optimization in Angular — Complete Practical Guide</h1>
+      <div class="blog-meta d-flex justify-content-center align-items-center gap-3 text-muted">
+        <span class="author">By Sahil Shekh</span>
+        <span class="dot"></span>
+        <span class="date">April 14, 2026</span>
+        <span class="dot"></span>
+        <span class="read-time">10 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Image -->
+  <div class="container mb-3">
+    <div class="featured-image-wrapper">
+      <img src="assets/images/angular-performance-optimization-thumbnail.webp" alt="Angular Performance Optimization"
+        width="398" height="222" class="img-fluid rounded-4 shadow-sm w-100">
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="blog-content">
+          <section class="introduction mb-5">
+            <h2 class="h3 mb-4">🧭 Introduction</h2>
+            <p>
+              Modern users expect websites to load instantly. Even a small delay can cause users to leave a website.
+              As a frontend developer, performance optimization is not optional — it is a core responsibility.
+            </p>
+            <p>
+              In this blog, I will explain how I optimize Angular applications to achieve:
+            </p>
+            <ul class="custom-list">
+              <li>Faster loading speed</li>
+              <li>Better Lighthouse score</li>
+              <li>Improved SEO</li>
+              <li>Smooth user experience</li>
+            </ul>
+            <p>This guide is based on real development practices I use in my projects.</p>
+          </section>
+
+          <section class="why-matters mb-5">
+            <h2 class="h3 mb-4">⚡ Why Performance Matters</h2>
+            <div class="info-card mb-4">
+              <p class="mb-0">A slow application causes:</p>
+              <ul class="mb-0 mt-2">
+                <li>Poor user experience</li>
+                <li>High bounce rate</li>
+                <li>Low SEO ranking</li>
+                <li>Reduced client trust</li>
+              </ul>
+            </div>
+            <p>Google recommends fast and optimized websites because performance directly affects engagement and
+              conversions.</p>
+          </section>
+
+          <section class="basics mb-5">
+            <h2 class="h3 mb-4">🧱 Angular Performance Basics</h2>
+            <p>Before optimization, it is important to understand why Angular apps sometimes become slow.</p>
+            <p><strong>Common reasons:</strong></p>
+            <div class="tag-cloud mb-4">
+              <span class="badge">Large bundle size</span>
+              <span class="badge">Unnecessary change detection</span>
+              <span class="badge">Heavy components</span>
+              <span class="badge">Unoptimized images</span>
+              <span class="badge">Too many API calls</span>
+            </div>
+            <p>Optimization means reducing unnecessary work for the browser.</p>
+          </section>
+
+          <section class="load-process mb-5">
+            <h2 class="h3 mb-4">🖼️ Angular Application Load Process</h2>
+            <p>When an Angular app loads:</p>
+            <div class="process-steps">
+              <div class="step">
+                <span class="step-num">1</span>
+                <span>Browser downloads JavaScript bundle</span>
+              </div>
+              <div class="step">
+                <span class="step-num">2</span>
+                <span>Angular bootstraps the application</span>
+              </div>
+              <div class="step">
+                <span class="step-num">3</span>
+                <span>Components render</span>
+              </div>
+              <div class="step">
+                <span class="step-num">4</span>
+                <span>Change detection starts running</span>
+              </div>
+            </div>
+            <p class="mt-4">If bundles are large, loading becomes slow.</p>
+          </section>
+
+          <section class="lazy-loading mb-5">
+            <div class="section-card">
+              <h2 class="h4 mb-4 text-success">✅ 1. Lazy Loading Modules</h2>
+              <div class="mb-4">
+                <h5 class="small-title">Problem</h5>
+                <p>All modules load at once → large initial bundle.</p>
+              </div>
+              <div class="mb-4">
+                <h5 class="small-title">Solution</h5>
+                <p>Use Lazy Loading. Loads only required modules when the user navigates to a page.</p>
+              </div>
+              <div class="code-interface mb-4">
+                <div class="code-header">
+                  <span>app-routing.module.ts</span>
+                  <button class="copy-btn">Copy</button>
+                </div>
+                <pre><code>{{ '{' }}
+  path: 'projects',
+  loadChildren: () =>
+    import('./projects/projects.module')
+    .then(m => m.ProjectsModule)
+{{ '}' }}</code></pre>
+              </div>
+              <div class="benefits mt-4">
+                <h6>Benefits</h6>
+                <ul class="check-list">
+                  <li>Faster initial load</li>
+                  <li>Better performance score</li>
+                  <li>Scalable architecture</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="change-detection mb-5">
+            <div class="section-card">
+              <h2 class="h4 mb-4 text-success">✅ 2. Change Detection Optimization</h2>
+              <p>Angular checks components frequently using change detection. Too many checks = performance loss.</p>
+              <div class="mb-4">
+                <h5 class="small-title">Best Practice</h5>
+                <p>Use: <code>ChangeDetectionStrategy.OnPush</code></p>
+              </div>
+              <div class="code-interface mb-4">
+                <div class="code-header">
+                  <span>card.component.ts</span>
+                </div>
+                <pre><code>@Component({{ '{' }}
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
+{{ '}' }})</code></pre>
+              </div>
+              <div class="result-box bg-light p-3 rounded">
+                <p class="mb-0"><strong>Result:</strong> Angular updates only when data changes, leading to less CPU
+                  usage and faster UI rendering.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="bundle-size mb-5">
+            <h2 class="h4 mb-4 text-success">✅ 3. Optimize Bundle Size</h2>
+            <p>Large JavaScript files slow down loading.</p>
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <div class="feature-item p-3 border rounded h-100">
+                  <h6>Techniques I Use</h6>
+                  <ul class="mb-0">
+                    <li>Remove unused libraries</li>
+                    <li>Enable production build</li>
+                    <li>Tree shaking</li>
+                    <li>Avoid heavy packages</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item p-3 border rounded h-100 bg-dark text-white">
+                  <h6 class="text-white-50">Build Command</h6>
+                  <pre class="mb-0"><code>ng build --configuration production</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="pro-tip p-3 border-start border-4 border-info bg-light">
+              <strong>Pro Tip:</strong> Always analyze bundle size using <code>ng build --stats-json</code>.
+            </div>
+          </section>
+
+          <section class="image-opt mb-5">
+            <h2 class="h4 mb-4 text-success">✅ 4. Image Optimization</h2>
+            <p>Images are one of the biggest performance problems.</p>
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <div class="status-token">Use WebP</div>
+              </div>
+              <div class="col-sm-4">
+                <div class="status-token">Compress</div>
+              </div>
+              <div class="col-sm-4">
+                <div class="status-token">Lazy Load</div>
+              </div>
+            </div>
+            <div class="code-interface mt-4 mb-4">
+              <pre><code>&lt;img loading="lazy" src="image.webp"&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="track-by mb-5">
+            <h2 class="h4 mb-4 text-success">✅ 5. Use TrackBy in *ngFor</h2>
+            <p>Angular re-renders entire lists if not optimized.</p>
+            <div class="code-interface mb-4">
+              <div class="code-header"><span>component.ts</span></div>
+              <pre><code>trackById(index: number, item: any) {{ '{' }}
+  return item.id;
+{{ '}' }}</code></pre>
+            </div>
+            <div class="code-interface mb-4">
+              <div class="code-header"><span>template.html</span></div>
+              <pre><code>&lt;div *ngFor="let item of items; trackBy: trackById"&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="api-opt mb-5">
+            <h2 class="h4 mb-4 text-success">✅ 6. API Call Optimization</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h5 class="small-title">Best Practices</h5>
+                <ul>
+                  <li>Cache API responses</li>
+                  <li>Use RxJS operators</li>
+                  <li>Avoid duplicate requests</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="code-interface">
+                  <pre><code>shareReplay(1)</code></pre>
+                </div>
+                <p class="small text-muted mt-2">This prevents repeated API execution.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="lighthouse mb-5">
+            <h2 class="h4 mb-4 text-success">✅ 8. Use Lighthouse</h2>
+            <p>I regularly test performance using Lighthouse. Goal is 90+ score.</p>
+            <div class="lighthouse-scores py-4 px-3 border rounded text-center mb-4">
+              <div class="row">
+                <div class="col-3">
+                  <div class="score-circle">Performance<span>99</span></div>
+                </div>
+                <div class="col-3">
+                  <div class="score-circle">Accessibility<span>100</span></div>
+                </div>
+                <div class="col-3">
+                  <div class="score-circle">Best Practices<span>100</span></div>
+                </div>
+                <div class="col-3">
+                  <div class="score-circle">SEO<span>100</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="conclusion-section mt-5 border-top pt-5">
+            <h2 class="h3 mb-4">🎯 Conclusion</h2>
+            <p>
+              Angular is powerful, but performance depends on how developers use it.
+              Performance optimization is not a one-time task — it is a continuous improvement process.
+            </p>
+            <div class="lessons-learned mt-5 p-4 bg-primary text-white rounded-4">
+              <h4 class="text-white mb-3">💡 Key Lessons Learned</h4>
+              <ul class="text-white-50 mb-0">
+                <li>Performance should start from project planning</li>
+                <li>Small optimizations create big results</li>
+                <li>Clean architecture improves speed</li>
+                <li>User experience depends on performance</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Back to Blogs -->
+        <div class="back-nav mt-5 text-center">
+          <a routerLink="/blogs" class="btn btn-outline-dark rounded-pill px-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to All Blogs
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

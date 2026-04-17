@@ -5,14 +5,27 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./components/home/home-routing.module').then(
-        (m) => m.HomeRouterModule
-      ),
+      import('./components/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'blogs',
+    loadChildren: () =>
+      import('./components/blogs/blogs.module').then((m) => m.BlogsModule),
+  },
+  {
+    path: '**',
+    redirectTo: '/',
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+      scrollOffset: [0, 90],
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
