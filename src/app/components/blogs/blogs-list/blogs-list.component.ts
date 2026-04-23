@@ -27,7 +27,7 @@ export class BlogsListComponent implements OnInit, OnDestroy {
   constructor(
     private seoService: SeoService,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const routeData = this.route.snapshot.data;
@@ -47,6 +47,8 @@ export class BlogsListComponent implements OnInit, OnDestroy {
         "name": "Sahil Shekh's Tech Blog",
         "description": routeData['description'],
         "url": window.location.href,
+        "about": "Frontend Development, Angular, and Web Design",
+        "headline": "Sahil Shekh's Tech Blog",
         "author": {
           "@type": "Person",
           "name": "Sahil Shekh"

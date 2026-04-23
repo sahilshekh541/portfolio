@@ -24,12 +24,12 @@
     <loc>https://sahilshekh541.github.io/portfolio#contact</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
   </url>
-  <url>
-    <loc>https://sahilshekh541.github.io/portfolio/blogs</loc>
+ <url>
+    <loc>https://sahilshekh541.github.io/portfolio/#/blogs</loc>
     <lastmod>2026-04-17T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://sahilshekh541.github.io/portfolio/blogs/angular-performance-optimization</loc>
+    <loc>https://sahilshekh541.github.io/portfolio/#/blogs/angular-performance-optimization</loc>
     <lastmod>2026-04-17T00:00:00+00:00</lastmod>
   </url>
 </urlset>
