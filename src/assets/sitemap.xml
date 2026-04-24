@@ -5,31 +5,31 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://sahilshekh541.github.io/portfolio/</loc>
+  <loc>https://sahilshekh.vercel.app</loc>
   <lastmod>2026-03-05T07:10:41+00:00</lastmod>
 </url>
 <url>
-    <loc>https://sahilshekh541.github.io/portfolio#about</loc>
+    <loc>https://sahilshekh.vercel.app/#about</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://sahilshekh541.github.io/portfolio#skills</loc>
+    <loc>https://sahilshekh.vercel.app/#skills</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://sahilshekh541.github.io/portfolio#experience</loc>
+    <loc>https://sahilshekh.vercel.app/#experience</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://sahilshekh541.github.io/portfolio#contact</loc>
+    <loc>https://sahilshekh.vercel.app/#contact</loc>
     <lastmod>2026-03-05T00:00:00+00:00</lastmod>
   </url>
  <url>
-    <loc>https://sahilshekh541.github.io/portfolio/#/blogs</loc>
+    <loc>https://sahilshekh.vercel.app/#/blogs</loc>
     <lastmod>2026-04-17T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://sahilshekh541.github.io/portfolio/#/blogs/angular-performance-optimization</loc>
+    <loc>https://sahilshekh.vercel.app/#/blogs/angular-performance-optimization</loc>
     <lastmod>2026-04-17T00:00:00+00:00</lastmod>
   </url>
 </urlset>

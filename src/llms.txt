@@ -1,7 +1,7 @@
 # Sahil Shekh - Frontend Angular Developer Portfolio
 
 Owner: Sahil Shekh
-Website: https://sahilshekh541.github.io/portfolio
+Website: https://sahilshekh.vercel.app
 Role: Frontend Developer (Angular)
 Location: India
 Experience: 1.5+ Years
@@ -32,13 +32,13 @@ Optimized applications for performance and SEO.
 Contributed to unit testing and debugging.
 
 ## Sections Available
-Homepage: https://sahilshekh541.github.io/portfolio
-About: https://sahilshekh541.github.io/portfolio#about
-Skills: https://sahilshekh541.github.io/portfolio#skills
-Experience: https://sahilshekh541.github.io/portfolio#experience
-Contact: https://sahilshekh541.github.io/portfolio#contact
-Blogs: https://sahilshekh541.github.io/portfolio/blogs
-Blog - Angular Performance Optimization: https://sahilshekh541.github.io/portfolio/blogs/angular-performance-optimization
+Homepage: https://sahilshekh.vercel.app
+About: https://sahilshekh.vercel.app/#about
+Skills: https://sahilshekh.vercel.app/#skills
+Experience: https://sahilshekh.vercel.app/#experience
+Contact: https://sahilshekh.vercel.app/#contact
+Blogs: https://sahilshekh.vercel.app/blogs
+Blog - Angular Performance Optimization: https://sahilshekh.vercel.app/blogs/angular-performance-optimization
 
 ## Contact
 For freelance or job opportunities, use the contact section on the website.

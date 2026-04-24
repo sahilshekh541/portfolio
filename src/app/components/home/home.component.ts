@@ -14,7 +14,10 @@ declare var ScrollTrigger: any;
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   projects = PROJECTS;
 
-  constructor(private seoService: SeoService, private imagePrefetchService: ImagePrefetchService) { }
+  constructor(
+    private seoService: SeoService,
+    private imagePrefetchService: ImagePrefetchService,
+  ) {}
 
   ngOnInit(): void {
     this.seoService.updateSeo({
@@ -28,17 +31,17 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       ogDescription:
         'Portfolio of Sahil Shekh showcasing Angular projects, scalable applications, and performance-driven frontend development.',
       ogImage:
-        'https://sahilshekh541.github.io/portfolio/assets/images/sahil-shekh-portfolio.png',
-      ogUrl: 'https://sahilshekh541.github.io/portfolio/',
+        'https://sahilshekh.vercel.app/assets/images/sahil-shekh-portfolio.png',
+      ogUrl: 'https://sahilshekh.vercel.app',
     });
 
     this.seoService.addSchemaMarkup({
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Sahil Shekh',
-      url: 'https://sahilshekh541.github.io/portfolio',
+      url: 'https://sahilshekh.vercel.app',
       image:
-        'https://sahilshekh541.github.io/portfolio/assets/images/sahil-shekh-portfolio.png',
+        'https://sahilshekh.vercel.app/assets/images/sahil-shekh-portfolio.png',
       jobTitle: 'Frontend Angular Developer',
       worksFor: {
         '@type': 'Organization',
@@ -77,54 +80,87 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       // --- Hero Section Animations ---
       const heroTl = gsap.timeline();
-      heroTl.fromTo('.hero-sidebar-left', {
-        x: -50,
-        opacity: 0
-      }, {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: 'power3.out'
-      })
-        .fromTo('.portrait-container', {
-          scale: 0.9,
-          opacity: 0
-        }, {
-          scale: 1,
-          opacity: 1,
-          duration: 1.2,
-          ease: 'power3.out'
-        }, '-=0.5')
-        .fromTo('.hero-main-name', {
-          y: 80,
-          opacity: 0
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1.4,
-          ease: 'expo.out'
-        }, '-=0.8')
-        .fromTo('.hero-badge-subtitle', {
-          y: 30,
-          opacity: 0
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: 'power3.out'
-        }, '-=1.1')
-        .fromTo('.circular-text-wrapper', {
-          opacity: 0
-        }, {
-          opacity: 1,
-          duration: 1,
-          ease: 'power2.inOut'
-        }, '-=1.3');
+      heroTl
+        .fromTo(
+          '.hero-sidebar-left',
+          {
+            x: -50,
+            opacity: 0,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out',
+          },
+        )
+        .fromTo(
+          '.portrait-container',
+          {
+            scale: 0.9,
+            opacity: 0,
+          },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 1.2,
+            ease: 'power3.out',
+          },
+          '-=0.5',
+        )
+        .fromTo(
+          '.hero-main-name',
+          {
+            y: 80,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.4,
+            ease: 'expo.out',
+          },
+          '-=0.8',
+        )
+        .fromTo(
+          '.hero-badge-subtitle',
+          {
+            y: 30,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out',
+          },
+          '-=1.1',
+        )
+        .fromTo(
+          '.circular-text-wrapper',
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.inOut',
+          },
+          '-=1.3',
+        );
 
       // --- Section Titles and Descriptions ---
-      const sections = ['.about-new-section', '.tech-stack-section', '.feature-projects-section', '.experience-new-section', '.get-in-touch-section'];
-      sections.forEach(section => {
-        const titleSpan = document.querySelector(`${section} .section-title span`);
+      const sections = [
+        '.about-new-section',
+        '.tech-stack-section',
+        '.feature-projects-section',
+        '.experience-new-section',
+        '.get-in-touch-section',
+      ];
+      sections.forEach((section) => {
+        const titleSpan = document.querySelector(
+          `${section} .section-title span`,
+        );
         const desc = document.querySelector(`${section} .section-description`);
 
         if (titleSpan) {
@@ -136,8 +172,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             scrollTrigger: {
               trigger: titleSpan,
               start: 'top 90%',
-              toggleActions: 'play none none none'
-            }
+              toggleActions: 'play none none none',
+            },
           });
         }
 
@@ -151,91 +187,111 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             scrollTrigger: {
               trigger: desc,
               start: 'top 90%',
-              toggleActions: 'play none none none'
-            }
+              toggleActions: 'play none none none',
+            },
           });
         }
       });
 
       // --- About Section Content ---
-      gsap.fromTo('.profile-card', {
-        x: -50,
-        opacity: 0
-      }, {
-        x: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.profile-card',
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.profile-card',
+        {
+          x: -50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.profile-card',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
 
-      gsap.fromTo('.about-info-card', {
-        x: 50,
-        opacity: 0
-      }, {
-        x: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.about-info-card',
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.about-info-card',
+        {
+          x: 50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.about-info-card',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
 
-      gsap.fromTo('.roles-apps-card', {
-        y: 40,
-        opacity: 0
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.roles-apps-card',
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.roles-apps-card',
+        {
+          y: 40,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.roles-apps-card',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
 
       // --- Tech Stack Skills Stagger ---
-      gsap.fromTo('.skill-card', {
-        y: 30,
-        opacity: 0
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.05,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.skills-grid',
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.skill-card',
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.05,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.skills-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
 
       // --- Feature Projects Stagger ---
-      gsap.fromTo('.project-card', {
-        y: 50,
-        opacity: 0
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.projects-grid',
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.project-card',
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.projects-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
 
       // --- Experience Timeline items ---
       const items = document.querySelectorAll('.timeline-item');
@@ -248,27 +304,31 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           scrollTrigger: {
             trigger: item,
             start: 'top 85%',
-            toggleActions: 'play none none none'
-          }
+            toggleActions: 'play none none none',
+          },
         });
       });
 
       // --- Get in Touch Menu Links Stagger ---
-      gsap.fromTo('.menu-link', {
-        y: 30,
-        opacity: 0
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.menus-link',
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      });
+      gsap.fromTo(
+        '.menu-link',
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.menus-link',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        },
+      );
     }
   }
 
