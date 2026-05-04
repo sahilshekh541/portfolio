@@ -4,5 +4,5 @@ Allow: /
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
-Sitemap: https://sahilshekh.vercel.app/assets/sitemap.xml
+Sitemap: https://sahilshekh.vercel.app/sitemap.xml
  
