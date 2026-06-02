@@ -21,15 +21,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.seoService.updateSeo({
-      title: 'Sahil Shekh | Angular Developer | Frontend Developer India',
+      title: 'Sahil Shekh | Full Stack Developer | Software Engineer',
       description:
-        'Sahil Shekh is a Frontend Angular Developer with 1.5+ years of experience building scalable, high-performance web applications using Angular, TypeScript, and REST APIs.',
+        'Sahil Shekh is a Full Stack Developer with 1.5+ years of experience building scalable, high-performance web applications using the MEAN stack, Angular, Node.js, Express.js, and MongoDB.',
       keywords:
-        'Sahil Shekh, Angular Developer India, Frontend Developer Rajkot, Angular Portfolio, TypeScript Developer, REST API Integration, Junior Software Engineer',
+        'Sahil Shekh, Full Stack Developer, MEAN Stack Developer, Angular Developer, Node.js Developer, Express.js, Mongoose, MongoDB, TypeScript, REST API, Software Engineer India',
       author: 'Sahil Shekh',
-      ogTitle: 'Sahil Shekh - Angular Frontend Developer',
+      ogTitle: 'Sahil Shekh - Full Stack Developer',
       ogDescription:
-        'Portfolio of Sahil Shekh showcasing Angular projects, scalable applications, and performance-driven frontend development.',
+        'Portfolio of Sahil Shekh showcasing full-stack projects, scalable applications, and performance-driven web development.',
       ogImage:
         'https://sahilshekh.vercel.app/assets/images/sahil-shekh-portfolio.png',
       ogUrl: 'https://sahilshekh.vercel.app',
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       url: 'https://sahilshekh.vercel.app',
       image:
         'https://sahilshekh.vercel.app/assets/images/sahil-shekh-portfolio.png',
-      jobTitle: 'Frontend Angular Developer',
+      jobTitle: 'Full Stack Developer',
       worksFor: {
         '@type': 'Organization',
         name: 'ownAI',
@@ -61,7 +61,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'Angular',
         'TypeScript',
         'JavaScript',
-        'Frontend Development',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Mongoose',
+        'Full Stack Development',
         'REST API Integration',
         'SEO Optimization',
       ],

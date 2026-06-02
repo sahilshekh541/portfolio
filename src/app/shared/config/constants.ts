@@ -278,5 +278,35 @@ export const PROJECTS: Project[] = [
       'Effectively demonstrated real-world development experience.'
     ],
   },
-
+  // {
+  //   url: 'grocery-store-app',
+  //   title: 'Grocery Store',
+  //   tech: 'MEAN Stack',
+  //   image: 'assets/images/grocery-project.webp',
+  //   alt: 'grocery store management application',
+  //   height: 800,
+  //   width: 1200,
+  //   description:
+  //     'A full-stack grocery management application with separate panels for Admins, Store Owners, and Customers, secured by JWT and RBAC.',
+  //   overview: [
+  //     'Developed a grocery management platform designed to streamline inventory management, order processing, and user interaction.',
+  //     'The system features three dedicated dashboards: an Admin panel for global platform management, a Store Owner panel for product and order fulfillment, and a Customer portal for browsing and purchasing.',
+  //     'Built as a full-stack MEAN application, using Angular for a responsive user interface and Node.js/Express.js/MongoDB for a secure, high-performance backend.'
+  //   ],
+  //   problems: [
+  //     'Managing distinct permission tiers and dashboard access for Admins, Store Owners, and Customers securely.',
+  //     'Establishing efficient database relationships and CRUD operations for large product inventories and real-time orders.',
+  //     'Ensuring user authentication persists safely across routes without compromising API security.'
+  //   ],
+  //   solutions: [
+  //     'Implemented secure JWT authentication combined with Role-Based Access Control (RBAC) and Angular route guards to restrict unauthorized access.',
+  //     'Designed highly optimized MongoDB collections for products, orders, and users, and wrote expressive CRUD operations using Mongoose.',
+  //     'Integrated Node.js/Express.js REST APIs with Angular modules using HTTP Interceptors to attach security headers automatically.'
+  //   ],
+  //   impact: [
+  //     'Delivered a highly secure, role-separated platform with zero unauthorized access vulnerabilities.',
+  //     'Implemented seamless state management for real-time inventory and order updates.',
+  //     'Developed an end-to-end full-stack application independently from design to database schema.'
+  //   ]
+  // }
 ];

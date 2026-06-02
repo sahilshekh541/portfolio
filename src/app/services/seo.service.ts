@@ -1,11 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-  constructor(private title: Title, private meta: Meta) {}
+  constructor(
+    private title: Title,
+    private meta: Meta,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
   updateSeo(config: {
     title: string;
@@ -14,6 +19,7 @@ export class SeoService {
     ogDescription?: string;
     ogImage?: string;
     ogUrl?: string;
+    canonicalUrl?: string;
     keywords?: string;
     author?: string;
   }) {
@@ -43,12 +49,31 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:title', content: config.ogTitle || config.title });
     this.meta.updateTag({ name: 'twitter:description', content: config.ogDescription || config.description });
+
+    // Canonical Link Tag
+    let canonical = config.canonicalUrl || config.ogUrl;
+    if (!canonical && typeof window !== 'undefined') {
+      canonical = window.location.origin + window.location.pathname;
+    }
+    if (canonical) {
+      this.updateCanonicalUrl(canonical);
+    }
+  }
+
+  updateCanonicalUrl(url: string) {
+    let link = this.document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = this.document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      this.document.head.appendChild(link);
+    }
+    link.setAttribute('href', url);
   }
 
   addSchemaMarkup(schema: any) {
-    const script = document.createElement('script');
+    const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
+    this.document.head.appendChild(script);
   }
 }

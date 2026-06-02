@@ -1,26 +1,27 @@
-# Sahil Shekh - Frontend Angular Developer Portfolio
+# Sahil Shekh - Full Stack Developer Portfolio
 
 Owner: Sahil Shekh
 Website: https://sahilshekh.vercel.app
-Role: Frontend Developer (Angular)
+Role: Full Stack Developer (MEAN Stack)
 Location: India
 Experience: 1.5+ Years
 
 ## About
-This website is the personal portfolio of Sahil Shekh, a Frontend Developer specializing in Angular development. 
+This website is the personal portfolio of Sahil Shekh, a Full Stack Developer specializing in Angular, Node.js, Express.js, and MongoDB (MEAN Stack). 
 It showcases professional experience, technical skills, and project work.
 
 ## Skills
 - Angular
+- Node.js
+- Express.js
+- MongoDB & Mongoose
 - TypeScript
 - JavaScript
-- HTML5
-- CSS3
-- SCSS
-- RESTful API Integration
+- HTML5 & CSS3 / SCSS
+- RESTful API Development & Integration
+- Role-Based Access Control (RBAC) & JWT
 - Unit Testing
-- Performance Optimization
-- SEO Optimization
+- Performance & SEO Optimization
 - Git & GitHub
 
 ## Experience
